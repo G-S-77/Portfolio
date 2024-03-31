@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style_accueil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header id="navbar" class="nav">
+        <a class="presentation" href="#presentation">À propos de moi</a>
+        <a class="competences" href="#competences">Compétences</a>
+        <a class="projets" href="#projets">Projets</a>
+    </header>
+    <section id="intro"><a name="presentation"></a>
+        <h1>Présentation</h1>
+        <span>Bienvenue sur mon Portfolio !</span>
+        <br>
+        <span>Je m'appelle Gaëlle Sognon, et je suis lycéenne en Terminale Générale avec les spécialités Mathématiques et Numérique Sciences Informatiques (NSI).</span>
+        <br>
+        <span>Depuis trois ans, je me suis découvert une passion pour le développement web. Au lycée, j'ai réalisé de nombreux projets en Python et quelques projets en HTML et CSS de mon côté pour apprendre et m'entrainer.</span>
+    </section>
+    <section id="skill"><a name="competences"></a>
+        <h1>Mes compétences</h1>
+        <div class="card-container">
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-front">
+                        <span>HTML & CSS</span>
+                        <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="card-back">
+                        <ul>
+                        <li>Créer un site web comportant plusieurs pages</li>
+                        <li>Styliser et animer du texte</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-front">
+                        <span>SQL</span>
+                        <i class="fa-solid fa-database"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="card-back">
+                        <ul>
+                            <li>Créer des tables</li>
+                            <li>Afficher des éléments d'une table</li>
+                            <li>Jointure entre plusieurs tables</li>
+                            <li>Ajouter des valeurs à une table</li>
+                            <li>Modifier des valeurs dans une table</li>
+                            <li>Supprimer les valeurs d'une table</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-front">
+                        <span>Python</span>
+                        <i class="fa-brands fa-python"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="card-back">
+                        <ul>
+                            <li>Créer des boucles</li>
+                            <li>Créer des fonctions et des fonctions récursives</li>
+                            <li>Construire des tableaux (list), tupples, dictionnaires, files, piles</li>
+                            <li>Programmation orientée objet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projet"><a name="projets"></a>
+        <h1>Mes projets</h1>
+        <div class="flex-image">
+            <div class="flex">
+                <a href="projet01.html" ><img src="Jeu créé pendant la Nuit du Code 2023.png" alt="Jeu créé pendant la Nuit du Code 2023" class="image"></a>
+                <span>Vidéo de démonstration du jeu créé pendant la Nuit du Code 2023</span>
+            </div>
+            <div class="flex">
+                <a href="https://g-s-77.github.io/Genealogie/index.html"><img src="Site généalogique.png" alt="Site généalogique" class="image"></a>
+                <span>Site généalogique</span>
+            </div>
+            <div class="flex">
+                <a href="projet02.html" ><img src="Répertoire téléphonique.jpg" alt="Répertoire téléphonique codé en Python" class="image"></a>
+                <span>Répertoire téléphonique</span>
+            </div>
+        </div>
+    </section>
+    <div class="btn1">
+        <img src="arrow-up-solid.svg" alt="" class="icone1">
+    </div>
+    <script src="fleche.js"></script>
+</body>
+</html>

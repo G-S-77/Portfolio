@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    /* margin: 10px 20px; */
+    font-family: 'Poppins', sans-serif;
+    background: url(bg02.jpg);
+    background-color: #08212d;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+h1{
+    color: #f1f1f1;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    display: block;
+    text-transform: uppercase;
+}
+
+/* Bouton pour retourner vers le haut */
+.btn1{
+    height: 50px;
+    width: 50px;
+    background: #62829a;
+    /* #62789a */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: apparition .8s .2s ease-out forwards;
+}
+.icone1{
+    width: 25px;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: apparition .8s .2s ease-out forwards;
+}
+/* Navbar */
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition .4s 1.6s ease-out forwards;
+}
+header a{
+    margin: 0 15px;
+    font-size: 1.3em;
+}
+header .accueil, header .presentation, header .competences, header .projets{
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: color .5s;
+}
+@media (max-width: 600px){
+    header.responsive a{
+        padding: 10px 0;
+    }
+    header{
+        flex-direction: column;
+        min-height: 70px;
+        height: 100%;
+        align-items: center;
+    }
+}
+/* Animation nav-bar */
+header a{
+    position: relative;
+    display: inline;
+}
+header a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    margin: 0 auto;
+    background: #f1f1f1;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+header a:hover::after{
+    transform: scale(1);
+}
+
+#intro, #skill, #projet{
+    position: relative;
+    bottom: -5vh;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 7vh;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+#intro{
+    animation: apparition .8s .2s ease-out forwards;
+}
+#skill{
+    animation: apparition .8s .4s ease-out forwards;
+}
+#projet{
+    animation: apparition .8s .6s ease-out forwards;
+}
+
+/* Section présentation */
+#intro span{
+    position: relative;
+    margin-top: -10px;
+    color:  #f1f1f1;
+}
+/* Section compétences */
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: apparition .8s 1s ease-out forwards;
+}
+.card-wrapper{
+    position: relative;
+    min-height: 300px;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+.card-wrapper:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card{
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.75,0,0.7,1);
+    color: #484661 ;
+    font-weight: bold;
+}
+.card-front, .card-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.card-front{
+    background: #a1d1e6;
+    /* #c2ddf1 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-front span{
+    font-size: 25px;
+    line-height: 35px;
+}
+.fa-arrow-right{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.fa-code, .fa-database, .fa-python{
+    position: absolute;
+    font-size: 50px;
+    top: 45%;
+}
+.fa-code{
+    left: 35%;
+}
+.fa-database, .fa-python{
+    left: 40%;
+}
+.card-back{
+    background: #a1d1e6;
+    transform: rotateY(180deg);
+    display: flex;
+}
+.card-back{
+    justify-content: center;
+    align-items: center;
+}
+.card-back li{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: normal;
+    font-size: 12px;
+}
+ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+  }
+.card-back,li::before{
+    content: "↬ ";
+}
+/* Section projet */
+.project{
+    position: absolute;
+    margin: auto;
+}
+
+img.image{
+    margin-top: 15px;
+    width: 60vh;
+    height: 50vh;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition .8s .5s ease-out forwards;
+}
+.flex-image{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #f1f1f1;
+    width: 50%;
+    font-size: 18px;
+}
+/* Projet 1 */
+h2{
+    display: flex;
+    color: #f1f1f1;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 20px;
+    justify-content: center;
+    padding-bottom: 45px;text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+h2{
+    animation: apparition .8s .2s ease-out forwards;
+}
+span.projet01{
+    display: flex;
+    align-items: flex-start;
+    color: #f1f1f1;
+    margin: 10px 10px;
+    font-size: 17px;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+span.projet01{
+    animation: apparition .8s .1s ease-out forwards;
+}
+span.projet02{
+    display: flex;
+    align-items: flex-start;
+    color: #f1f1f1;
+    margin: 10px 10px;
+    font-size: 17px;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+span.projet02{
+    animation: apparition .8s .1s ease-out forwards;
+}
+span.demo{
+    color: #f1f1f1;
+    font-weight: 500;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateX(60px);
+}
+span.demo{
+    animation: apparition .8s .2s ease-out forwards;
+}
+.demo{
+    display: block;
+    margin: auto;
+    width: 50vw;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+}
+.demo{
+    animation: apparition .8s .3s ease-out forwards;
+}
+a.projet02{
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px;
+    color: #f1f1f1;
+}
+
+/* Animation page */
+@keyframes apparition {
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
