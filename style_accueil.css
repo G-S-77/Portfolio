@@ -244,6 +244,12 @@ img.image{
     width: 50%;
     font-size: 18px;
 }
+@media screen and (min-width: 1700px) {
+    .flex {
+      margin-right: -100px;
+      padding-left: 200px;
+    }
+  }
 /* Projet 1 */
 h2{
     display: flex;
